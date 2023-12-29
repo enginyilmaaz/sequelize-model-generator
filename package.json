@@ -1,0 +1,32 @@
+{
+  "name": "Sequelize Model Generator",
+  "author": "enginyilmaaz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "scripts": {
+    "generate-models": "ts-node app.ts && sequelize-auto -o \"./models\" -d $npm_config_dbname -h $npm_config_dbhost -u $npm_config_dbuser -p $npm_config_dbport -x $npm_config_dbpassword -e $npm_config_dbdialect -l ts",
+    "start": "ts-node app.ts",
+    "build": "tsc",
+    "prestart": "npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "sequelize-auto": "^0.8.4",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "mssql": "^7.1.0",
+    "mysql": "^2.18.1",
+    "sqlite3": "^5.0.0",
+    "tedious": "^11.0.6",
+    "dotenv": "^10.0.0",
+    "mysql2": "^2.3.0",
+    "pg": "^8.7.1",
+    "sequelize": "^6.6.5"
+  }
+}
